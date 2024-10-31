@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 https://pmd.github.io/schema/report_2_0_0.xsd" version="7.3.0" timestamp="2024-10-31T19:43:42.582">
+<file name="/Users/wangguanjie/Desktop/code/code_test/MLB_profit/src/main/java/org/demo/PlayoffCalculator.java">
+<violation beginline="13" endline="13" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="org.demo" class="PlayoffCalculator" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="16" endline="16" begincolumn="33" endcolumn="41" rule="CommentRequired" ruleset="Documentation" package="org.demo" class="PlayoffCalculator" variable="WC_PRICE" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="17" endline="17" begincolumn="33" endcolumn="41" rule="CommentRequired" ruleset="Documentation" package="org.demo" class="PlayoffCalculator" variable="WS_PRICE" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="18" endline="18" begincolumn="33" endcolumn="43" rule="CommentRequired" ruleset="Documentation" package="org.demo" class="PlayoffCalculator" variable="HOME_SHARE" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="19" endline="19" begincolumn="33" endcolumn="43" rule="CommentRequired" ruleset="Documentation" package="org.demo" class="PlayoffCalculator" variable="AWAY_SHARE" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="20" endline="20" begincolumn="30" endcolumn="35" rule="CommentRequired" ruleset="Documentation" package="org.demo" class="PlayoffCalculator" variable="teams" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="87" endline="94" begincolumn="39" endcolumn="22" rule="AvoidInstantiatingObjectsInLoops" ruleset="Performance" package="org.demo" class="PlayoffCalculator" method="loadTeamsFromJson" variable="team" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_performance.html#avoidinstantiatingobjectsinloops" priority="3">
+Avoid instantiating new objects inside loops
+</violation>
+<violation beginline="111" endline="111" begincolumn="28" endcolumn="43" rule="CyclomaticComplexity" ruleset="Design" package="org.demo" class="PlayoffCalculator" method="isValidTeamData" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_design.html#cyclomaticcomplexity" priority="3">
+The method 'isValidTeamData(JSONObject)' has a cyclomatic complexity of 13.
+</violation>
+<violation beginline="115" endline="115" begincolumn="17" endcolumn="30" rule="OnlyOneReturn" ruleset="Code Style" package="org.demo" class="PlayoffCalculator" method="isValidTeamData" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="118" endline="118" begincolumn="39" endcolumn="52" rule="OnlyOneReturn" ruleset="Code Style" package="org.demo" class="PlayoffCalculator" method="isValidTeamData" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="118" endline="118" begincolumn="39" endcolumn="52" rule="ControlStatementBraces" ruleset="Code Style" package="org.demo" class="PlayoffCalculator" method="isValidTeamData" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#controlstatementbraces" priority="3">
+This statement should have braces
+</violation>
+<violation beginline="122" endline="122" begincolumn="81" endcolumn="94" rule="OnlyOneReturn" ruleset="Code Style" package="org.demo" class="PlayoffCalculator" method="isValidTeamData" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="122" endline="122" begincolumn="81" endcolumn="94" rule="ControlStatementBraces" ruleset="Code Style" package="org.demo" class="PlayoffCalculator" method="isValidTeamData" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#controlstatementbraces" priority="3">
+This statement should have braces
+</violation>
+<violation beginline="125" endline="125" begincolumn="13" endcolumn="29" rule="OnlyOneReturn" ruleset="Code Style" package="org.demo" class="PlayoffCalculator" method="isValidTeamData" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+</file>
+<file name="/Users/wangguanjie/Desktop/code/code_test/MLB_profit/src/main/java/org/demo/Team.java">
+<violation beginline="6" endline="6" begincolumn="8" endcolumn="13" rule="ShortClassName" ruleset="Code Style" package="org.demo" class="Team" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#shortclassname" priority="4">
+Avoid short class names like Team
+</violation>
+<violation beginline="6" endline="6" begincolumn="8" endcolumn="13" rule="DataClass" ruleset="Design" package="org.demo" class="Team" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_design.html#dataclass" priority="3">
+The class 'Team' is suspected to be a Data Class (WOC=0.000%, NOPA=0, NOAM=5, WMC=6)
+</violation>
+<violation beginline="7" endline="7" begincolumn="26" endcolumn="30" rule="CommentRequired" ruleset="Documentation" package="org.demo" class="Team" variable="name" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="8" endline="8" begincolumn="26" endcolumn="33" rule="UnusedPrivateField" ruleset="Best Practices" package="org.demo" class="Team" variable="stadium" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_bestpractices.html#unusedprivatefield" priority="3">
+Avoid unused private fields such as 'stadium'.
+</violation>
+<violation beginline="8" endline="8" begincolumn="26" endcolumn="33" rule="CommentRequired" ruleset="Documentation" package="org.demo" class="Team" variable="stadium" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="9" endline="9" begincolumn="23" endcolumn="38" rule="CommentRequired" ruleset="Documentation" package="org.demo" class="Team" variable="seatingCapacity" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="10" endline="10" begincolumn="26" endcolumn="37" rule="CommentRequired" ruleset="Documentation" package="org.demo" class="Team" variable="playoffRate" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="11" endline="11" begincolumn="26" endcolumn="32" rule="CommentRequired" ruleset="Documentation" package="org.demo" class="Team" variable="wsRate" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="12" endline="12" begincolumn="23" endcolumn="27" rule="CommentRequired" ruleset="Documentation" package="org.demo" class="Team" variable="rank" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="18" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="org.demo" class="Team" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+</file>
+<file name="/Users/wangguanjie/Desktop/code/code_test/MLB_profit/src/main/java/org/demo/mlb_Profit.java">
+<violation beginline="8" endline="8" begincolumn="8" endcolumn="13" rule="ClassNamingConventions" ruleset="Code Style" package="org.demo" class="mlb_Profit" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#classnamingconventions" priority="1">
+The class name 'mlb_Profit' doesn't match '[A-Z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="8" endline="8" begincolumn="8" endcolumn="13" rule="UseUtilityClass" ruleset="Design" package="org.demo" class="mlb_Profit" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_design.html#useutilityclass" priority="3">
+This utility class has a non-private constructor
+</violation>
+<violation beginline="9" endline="9" begincolumn="24" endcolumn="28" rule="CommentRequired" ruleset="Documentation" package="org.demo" class="mlb_Profit" method="main" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="13" endline="18" begincolumn="9" endcolumn="10" rule="ConfusingTernary" ruleset="Code Style" package="org.demo" class="mlb_Profit" method="main" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#confusingternary" priority="3">
+Avoid if (x != y) ..; else ..;
+</violation>
+</file>
+<file name="/Users/wangguanjie/Desktop/code/code_test/MLB_profit/src/main/java/org/xdemo/mlb_Profit.java">
+<violation beginline="4" endline="4" begincolumn="1" endcolumn="18" rule="UnnecessaryImport" ruleset="Code Style" package="org.xdemo" class="mlb_Profit" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.io.*'
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="24" rule="UnnecessaryImport" ruleset="Code Style" package="org.xdemo" class="mlb_Profit" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.nio.file.*'
+</violation>
+<violation beginline="6" endline="6" begincolumn="1" endcolumn="20" rule="UnnecessaryImport" ruleset="Code Style" package="org.xdemo" class="mlb_Profit" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.*'
+</violation>
+<violation beginline="9" endline="9" begincolumn="1" endcolumn="6" rule="ShortClassName" ruleset="Code Style" package="org.xdemo" class="Team" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#shortclassname" priority="4">
+Avoid short class names like Team
+</violation>
+<violation beginline="9" endline="9" begincolumn="1" endcolumn="6" rule="CommentRequired" ruleset="Documentation" package="org.xdemo" class="Team" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Class comments are required
+</violation>
+<violation beginline="9" endline="9" begincolumn="1" endcolumn="6" rule="DataClass" ruleset="Design" package="org.xdemo" class="Team" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_design.html#dataclass" priority="3">
+The class 'Team' is suspected to be a Data Class (WOC=0.000%, NOPA=0, NOAM=4, WMC=5)
+</violation>
+<violation beginline="10" endline="10" begincolumn="12" endcolumn="16" rule="CommentRequired" ruleset="Documentation" package="org.xdemo" class="Team" variable="name" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="10" endline="10" begincolumn="12" endcolumn="16" rule="CommentDefaultAccessModifier" ruleset="Code Style" package="org.xdemo" class="Team" variable="name" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#commentdefaultaccessmodifier" priority="3">
+Missing commented default access modifier on field 'name'
+</violation>
+<violation beginline="11" endline="11" begincolumn="12" endcolumn="19" rule="CommentRequired" ruleset="Documentation" package="org.xdemo" class="Team" variable="stadium" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="11" endline="11" begincolumn="12" endcolumn="19" rule="CommentDefaultAccessModifier" ruleset="Code Style" package="org.xdemo" class="Team" variable="stadium" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#commentdefaultaccessmodifier" priority="3">
+Missing commented default access modifier on field 'stadium'
+</violation>
+<violation beginline="12" endline="12" begincolumn="9" endcolumn="24" rule="CommentRequired" ruleset="Documentation" package="org.xdemo" class="Team" variable="seatingCapacity" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="12" endline="12" begincolumn="9" endcolumn="24" rule="CommentDefaultAccessModifier" ruleset="Code Style" package="org.xdemo" class="Team" variable="seatingCapacity" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#commentdefaultaccessmodifier" priority="3">
+Missing commented default access modifier on field 'seatingCapacity'
+</violation>
+<violation beginline="13" endline="13" begincolumn="12" endcolumn="27" rule="CommentRequired" ruleset="Documentation" package="org.xdemo" class="Team" variable="playoffFullRate" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="13" endline="13" begincolumn="12" endcolumn="27" rule="CommentDefaultAccessModifier" ruleset="Code Style" package="org.xdemo" class="Team" variable="playoffFullRate" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#commentdefaultaccessmodifier" priority="3">
+Missing commented default access modifier on field 'playoffFullRate'
+</violation>
+<violation beginline="14" endline="14" begincolumn="12" endcolumn="31" rule="LongVariable" ruleset="Code Style" package="org.xdemo" class="Team" variable="worldSeriesFullRate" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like worldSeriesFullRate
+</violation>
+<violation beginline="14" endline="14" begincolumn="12" endcolumn="31" rule="CommentRequired" ruleset="Documentation" package="org.xdemo" class="Team" variable="worldSeriesFullRate" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="14" endline="14" begincolumn="12" endcolumn="31" rule="CommentDefaultAccessModifier" ruleset="Code Style" package="org.xdemo" class="Team" variable="worldSeriesFullRate" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#commentdefaultaccessmodifier" priority="3">
+Missing commented default access modifier on field 'worldSeriesFullRate'
+</violation>
+<violation beginline="15" endline="15" begincolumn="9" endcolumn="13" rule="CommentRequired" ruleset="Documentation" package="org.xdemo" class="Team" variable="rank" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="15" endline="15" begincolumn="9" endcolumn="13" rule="CommentDefaultAccessModifier" ruleset="Code Style" package="org.xdemo" class="Team" variable="rank" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#commentdefaultaccessmodifier" priority="3">
+Missing commented default access modifier on field 'rank'
+</violation>
+<violation beginline="17" endline="17" begincolumn="12" endcolumn="16" rule="CommentRequired" ruleset="Documentation" package="org.xdemo" class="Team" method="Team" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="17" endline="17" begincolumn="24" endcolumn="28" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="Team" method="Team" variable="name" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'name' is not assigned and could be declared final
+</violation>
+<violation beginline="17" endline="17" begincolumn="37" endcolumn="44" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="Team" method="Team" variable="stadium" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'stadium' is not assigned and could be declared final
+</violation>
+<violation beginline="17" endline="17" begincolumn="50" endcolumn="65" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="Team" method="Team" variable="seatingCapacity" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'seatingCapacity' is not assigned and could be declared final
+</violation>
+<violation beginline="17" endline="17" begincolumn="74" endcolumn="89" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="Team" method="Team" variable="playoffFullRate" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'playoffFullRate' is not assigned and could be declared final
+</violation>
+<violation beginline="17" endline="17" begincolumn="98" endcolumn="117" rule="LongVariable" ruleset="Code Style" package="org.xdemo" class="Team" method="Team" variable="worldSeriesFullRate" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like worldSeriesFullRate
+</violation>
+<violation beginline="17" endline="17" begincolumn="98" endcolumn="117" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="Team" method="Team" variable="worldSeriesFullRate" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'worldSeriesFullRate' is not assigned and could be declared final
+</violation>
+<violation beginline="17" endline="17" begincolumn="123" endcolumn="127" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="Team" method="Team" variable="rank" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'rank' is not assigned and could be declared final
+</violation>
+<violation beginline="43" endline="43" begincolumn="1" endcolumn="6" rule="CommentRequired" ruleset="Documentation" package="org.xdemo" class="PlayoffCalculator" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Class comments are required
+</violation>
+<violation beginline="44" endline="44" begincolumn="33" endcolumn="54" rule="LongVariable" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" variable="WILDCARD_TICKET_PRICE" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like WILDCARD_TICKET_PRICE
+</violation>
+<violation beginline="44" endline="44" begincolumn="33" endcolumn="54" rule="CommentRequired" ruleset="Documentation" package="org.xdemo" class="PlayoffCalculator" variable="WILDCARD_TICKET_PRICE" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="45" endline="45" begincolumn="33" endcolumn="58" rule="LongVariable" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" variable="WORLD_SERIES_TICKET_PRICE" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like WORLD_SERIES_TICKET_PRICE
+</violation>
+<violation beginline="45" endline="45" begincolumn="33" endcolumn="58" rule="CommentRequired" ruleset="Documentation" package="org.xdemo" class="PlayoffCalculator" variable="WORLD_SERIES_TICKET_PRICE" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="46" endline="46" begincolumn="33" endcolumn="48" rule="CommentRequired" ruleset="Documentation" package="org.xdemo" class="PlayoffCalculator" variable="HOME_TEAM_SHARE" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="47" endline="47" begincolumn="33" endcolumn="48" rule="CommentRequired" ruleset="Documentation" package="org.xdemo" class="PlayoffCalculator" variable="AWAY_TEAM_SHARE" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="49" endline="49" begincolumn="24" endcolumn="29" rule="ImmutableField" ruleset="Design" package="org.xdemo" class="PlayoffCalculator" variable="teams" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Field 'teams' may be declared final
+</violation>
+<violation beginline="49" endline="49" begincolumn="24" endcolumn="29" rule="CommentRequired" ruleset="Documentation" package="org.xdemo" class="PlayoffCalculator" variable="teams" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="51" endline="51" begincolumn="12" endcolumn="29" rule="CommentRequired" ruleset="Documentation" package="org.xdemo" class="PlayoffCalculator" method="PlayoffCalculator" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="51" endline="51" begincolumn="41" endcolumn="46" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="PlayoffCalculator" variable="teams" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'teams' is not assigned and could be declared final
+</violation>
+<violation beginline="55" endline="55" begincolumn="17" endcolumn="32" rule="CommentRequired" ruleset="Documentation" package="org.xdemo" class="PlayoffCalculator" method="calculateProfit" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="56" endline="56" begincolumn="19" endcolumn="23" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="calculateProfit" variable="team" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'team' could be declared final
+</violation>
+<violation beginline="57" endline="57" begincolumn="20" endcolumn="29" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="calculateProfit" variable="minProfit" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'minProfit' could be declared final
+</violation>
+<violation beginline="58" endline="58" begincolumn="20" endcolumn="29" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="calculateProfit" variable="maxProfit" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'maxProfit' could be declared final
+</violation>
+<violation beginline="67" endline="67" begincolumn="44" endcolumn="48" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="calculateMinProfit" variable="team" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'team' is not assigned and could be declared final
+</violation>
+<violation beginline="71" endline="71" begincolumn="44" endcolumn="48" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="calculateMaxProfit" variable="team" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'team' is not assigned and could be declared final
+</violation>
+<violation beginline="72" endline="72" begincolumn="15" endcolumn="20" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="calculateMaxProfit" variable="games" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'games' could be declared final
+</violation>
+<violation beginline="73" endline="73" begincolumn="18" endcolumn="30" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="calculateMaxProfit" variable="ticketPrices" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'ticketPrices' could be declared final
+</violation>
+<violation beginline="74" endline="74" begincolumn="18" endcolumn="27" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="calculateMaxProfit" variable="fullRates" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'fullRates' could be declared final
+</violation>
+<violation beginline="78" endline="78" begincolumn="17" endcolumn="26" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="calculateMaxProfit" variable="homeGames" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'homeGames' could be declared final
+</violation>
+<violation beginline="84" endline="84" begincolumn="30" endcolumn="47" rule="CommentRequired" ruleset="Documentation" package="org.xdemo" class="PlayoffCalculator" method="loadTeamsFromJson" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="84" endline="84" begincolumn="55" endcolumn="63" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="loadTeamsFromJson" variable="filePath" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'filePath' is not assigned and could be declared final
+</violation>
+<violation beginline="85" endline="85" begincolumn="20" endcolumn="25" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="loadTeamsFromJson" variable="teams" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'teams' could be declared final
+</violation>
+<violation beginline="87" endline="87" begincolumn="20" endcolumn="28" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="loadTeamsFromJson" variable="jsonData" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'jsonData' could be declared final
+</violation>
+<violation beginline="88" endline="88" begincolumn="23" endcolumn="32" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="loadTeamsFromJson" variable="jsonArray" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'jsonArray' could be declared final
+</violation>
+<violation beginline="91" endline="91" begincolumn="28" endcolumn="31" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="loadTeamsFromJson" variable="obj" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'obj' could be declared final
+</violation>
+<violation beginline="95" endline="95" begincolumn="26" endcolumn="30" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="loadTeamsFromJson" variable="team" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'team' could be declared final
+</violation>
+<violation beginline="95" endline="102" begincolumn="33" endcolumn="22" rule="AvoidInstantiatingObjectsInLoops" ruleset="Performance" package="org.xdemo" class="PlayoffCalculator" method="loadTeamsFromJson" variable="team" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_performance.html#avoidinstantiatingobjectsinloops" priority="3">
+Avoid instantiating new objects inside loops
+</violation>
+<violation beginline="114" endline="114" begincolumn="28" endcolumn="43" rule="CyclomaticComplexity" ruleset="Design" package="org.xdemo" class="PlayoffCalculator" method="isValidTeamData" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_design.html#cyclomaticcomplexity" priority="3">
+The method 'isValidTeamData(JSONObject)' has a cyclomatic complexity of 14.
+</violation>
+<violation beginline="114" endline="114" begincolumn="55" endcolumn="58" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="isValidTeamData" variable="obj" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'obj' is not assigned and could be declared final
+</violation>
+<violation beginline="119" endline="119" begincolumn="17" endcolumn="30" rule="OnlyOneReturn" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="isValidTeamData" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="123" endline="123" begincolumn="17" endcolumn="32" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="isValidTeamData" variable="seatingCapacity" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'seatingCapacity' could be declared final
+</violation>
+<violation beginline="126" endline="126" begincolumn="17" endcolumn="30" rule="OnlyOneReturn" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="isValidTeamData" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="130" endline="130" begincolumn="20" endcolumn="35" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="isValidTeamData" variable="playoffFullRate" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'playoffFullRate' could be declared final
+</violation>
+<violation beginline="131" endline="131" begincolumn="20" endcolumn="39" rule="LongVariable" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="isValidTeamData" variable="worldSeriesFullRate" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like worldSeriesFullRate
+</violation>
+<violation beginline="131" endline="131" begincolumn="20" endcolumn="39" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="isValidTeamData" variable="worldSeriesFullRate" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'worldSeriesFullRate' could be declared final
+</violation>
+<violation beginline="134" endline="134" begincolumn="17" endcolumn="30" rule="OnlyOneReturn" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="isValidTeamData" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="138" endline="138" begincolumn="17" endcolumn="21" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="isValidTeamData" variable="rank" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'rank' could be declared final
+</violation>
+<violation beginline="141" endline="141" begincolumn="17" endcolumn="30" rule="OnlyOneReturn" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="isValidTeamData" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="144" endline="144" begincolumn="13" endcolumn="25" rule="OnlyOneReturn" ruleset="Code Style" package="org.xdemo" class="PlayoffCalculator" method="isValidTeamData" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="152" endline="152" begincolumn="8" endcolumn="13" rule="CommentRequired" ruleset="Documentation" package="org.xdemo" class="mlb_Profit" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Class comments are required
+</violation>
+<violation beginline="152" endline="152" begincolumn="8" endcolumn="13" rule="ClassNamingConventions" ruleset="Code Style" package="org.xdemo" class="mlb_Profit" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#classnamingconventions" priority="1">
+The class name 'mlb_Profit' doesn't match '[A-Z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="152" endline="152" begincolumn="8" endcolumn="13" rule="UseUtilityClass" ruleset="Design" package="org.xdemo" class="mlb_Profit" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_design.html#useutilityclass" priority="3">
+This utility class has a non-private constructor
+</violation>
+<violation beginline="153" endline="153" begincolumn="24" endcolumn="28" rule="CommentRequired" ruleset="Documentation" package="org.xdemo" class="mlb_Profit" method="main" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="154" endline="154" begincolumn="16" endcolumn="24" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="mlb_Profit" method="main" variable="filePath" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'filePath' could be declared final
+</violation>
+<violation beginline="155" endline="155" begincolumn="20" endcolumn="25" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="mlb_Profit" method="main" variable="teams" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'teams' could be declared final
+</violation>
+<violation beginline="157" endline="162" begincolumn="9" endcolumn="10" rule="ConfusingTernary" ruleset="Code Style" package="org.xdemo" class="mlb_Profit" method="main" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#confusingternary" priority="3">
+Avoid if (x != y) ..; else ..;
+</violation>
+<violation beginline="158" endline="158" begincolumn="31" endcolumn="41" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.xdemo" class="mlb_Profit" method="main" variable="calculator" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.3.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'calculator' could be declared final
+</violation>
+</file>
+<configerror rule="LoosePackageCoupling" msg="No packages or classes specified"/>
+</pmd>

@@ -1,0 +1,326 @@
+{
+  "season": "2024",
+
+  "teamRecord": [
+    {
+      "team": "NYY",
+      "wins": 94,
+      "losses": 68,
+      "league": "AL",
+      "division": "East"
+    },
+    {
+      "team": "CLE",
+      "wins": 92,
+      "losses": 69,
+      "league": "AL",
+      "division": "Central"
+    },
+    {
+      "team": "HOU",
+      "wins": 88,
+      "losses": 73,
+      "league": "AL",
+      "division": "West"
+    },
+    {
+      "team": "BAL",
+      "wins": 91,
+      "losses": 71,
+      "league": "AL",
+      "division": "East"
+    },
+    {
+      "team": "KC",
+      "wins": 86,
+      "losses": 76,
+      "league": "AL",
+      "division": "Central"
+    },
+    {
+      "team": "DET",
+      "wins": 86,
+      "losses": 76,
+      "league": "AL",
+      "division": "Central"
+    },
+    {
+      "team": "SEA",
+      "wins": 85,
+      "losses": 77,
+      "league": "AL",
+      "division": "West"
+    },
+    {
+      "team": "MIN",
+      "wins": 82,
+      "losses": 80,
+      "league": "AL",
+      "division": "Central"
+    },
+    {
+      "team": "BOS",
+      "wins": 81,
+      "losses": 81,
+      "league": "AL",
+      "division": "East"
+    },
+    {
+      "team": "TB",
+      "wins": 80,
+      "losses": 82,
+      "league": "America League",
+      "division": "East"
+    },
+    {
+      "team": "TEX",
+      "wins": 78,
+      "losses": 84,
+      "league": "AL",
+      "division": "West"
+    },
+    {
+      "team": "TOR",
+      "wins": 74,
+      "losses": 88,
+      "league": "AL",
+      "division": "East"
+    },
+    {
+      "team": "OAK",
+      "wins": 69,
+      "losses": 93,
+      "league": "AL",
+      "division": "West"
+    },
+    {
+      "team": "LAA",
+      "wins": 63,
+      "losses": 99,
+      "league": "AL",
+      "division": "West"
+    },
+    {
+      "team": "CWS",
+      "wins": 41,
+      "losses": 121,
+      "league": "AL",
+      "division": "Central"
+    },
+    {
+      "team": "LAD",
+      "wins": 98,
+      "losses": 64,
+      "league": "NL",
+      "division": "West"
+    },
+    {
+      "team": "PHI",
+      "wins": 95,
+      "losses": 67,
+      "league": "NL",
+      "division": "East"
+    },
+    {
+      "team": "MIL",
+      "wins": 93,
+      "losses": 69,
+      "league": "NL",
+      "division": "Central"
+    },
+    {
+      "team": "SD",
+      "wins": 93,
+      "losses": 69,
+      "league": "NL",
+      "division": "West"
+    },
+    {
+      "team": "ATL",
+      "wins": 88,
+      "losses": 72,
+      "league": "NL",
+      "division": "East"
+    },
+    {
+      "team": "NYM",
+      "wins": 88,
+      "losses": 72,
+      "league": "NL",
+      "division": "East"
+    },
+    {
+      "team": "ARI",
+      "wins": 89,
+      "losses": 73,
+      "league": "NL",
+      "division": "West"
+    },
+    {
+      "team": "CHC",
+      "wins": 83,
+      "losses": 79,
+      "league": "NL",
+      "division": "Central"
+    },
+    {
+      "team": "STL",
+      "wins": 83,
+      "losses": 79,
+      "league": "NL",
+      "division": "Central"
+    },
+    {
+      "team": "SF",
+      "wins": 80,
+      "losses": 82,
+      "league": "NL",
+      "division": "West"
+    },
+    {
+      "team": "CIN",
+      "wins": 77,
+      "losses": 85,
+      "league": "NL",
+      "division": "Central"
+    },
+    {
+      "team": "PIT",
+      "wins": 76,
+      "losses": 86,
+      "league": "NL",
+      "division": "Central"
+    },
+    {
+      "team": "WSH",
+      "wins": 71,
+      "losses": 91,
+      "league": "NL",
+      "division": "East"
+    },
+    {
+      "team": "MIA",
+      "wins": 62,
+      "losses": 100,
+      "league": "NL",
+      "division": "East"
+    },
+    {
+      "team": "COL",
+      "wins": 61,
+      "losses": 101,
+      "league": "NL",
+      "division": "West"
+    },
+    {
+      "team": "ColL",
+      "wins": 61,
+      "losses": 101,
+      "league": "NL",
+      "division": "West"
+    }
+  ]
+
+
+
+,
+  "playoffTeams": [
+    {
+      "team": "PHI",
+      "series": [
+        {
+          "opponent": "ATL",
+          "advanced": true
+        },
+        {
+          "opponent": "MIL",
+          "advanced": true
+        },
+        {
+          "opponent": "LAD",
+          "advanced": false
+        }
+      ]
+    },
+    {
+      "team": "MIL",
+      "series": [
+        {
+          "opponent": "PHI",
+          "advanced": false
+        }
+      ]
+    },
+    {
+      "team": "LAD",
+      "series": [
+        {
+          "opponent": "ARI",
+          "advanced": true
+        },
+        {
+          "opponent": "PHI",
+          "advanced": true
+        }
+      ]
+    },
+    {
+      "team": "ARI",
+      "series": [
+        {
+          "opponent": "MIL",
+          "advanced": true
+        },
+        {
+          "opponent": "LAD",
+          "advanced": false
+        }
+      ]
+    },
+    {
+      "team": "BAL",
+      "series": [
+        {
+          "opponent": "CLE",
+          "advanced": true
+        },
+        {
+          "opponent": "HOU",
+          "advanced": false
+        }
+      ]
+    },
+    {
+      "team": "CLE",
+      "series": [
+        {
+          "opponent": "BAL",
+          "advanced": false
+        }
+      ]
+    },
+    {
+      "team": "HOU",
+      "series": [
+        {
+          "opponent": "SEA",
+          "advanced": true
+        },
+        {
+          "opponent": "BAL",
+          "advanced": true
+        }
+      ]
+    },
+    {
+      "team": "SEA",
+      "series": [
+        {
+          "opponent": "HOU",
+          "advanced": false
+        }
+      ]
+    }
+  ]
+
+}
