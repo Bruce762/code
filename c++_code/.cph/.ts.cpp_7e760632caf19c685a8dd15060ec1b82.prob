@@ -1,1 +1,0 @@
-{"name":"Local: ts","url":"/Users/wangguanzhe/c++_code/ts.cpp","tests":[{"id":1699174386293,"input":"(-q+a)^2+(a+3)^z-3\n(-i+a)+/2/a+3)\n(d+e)^(2+f)","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/wangguanzhe/c++_code/ts.cpp","group":"local","local":true}
