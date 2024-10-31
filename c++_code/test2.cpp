@@ -1,10 +1,33 @@
-#include <bits/stdc++.h>
+#include <stdio.h>
+#include "NUC100Series.h"
+#include "MCU_init.h"
+#include "SYS_init.h"
+#include "LCD.h"
+#include "Scankey.h"
 #define SIZE 64
 //#define int int8_t
 
 int tmpInt,Intk;
 bool matrix[64][64] = {0};
 
+
+void EINT1_IRQHandler(void)
+{
+    GPIO_CLR_INT_FLAG(PB, BIT15);	// Clear GPIO interrupt flag
+    Intk=1;
+}
+
+void Init_EXTINT(void)
+{
+    // Configure EINT1 pin and enable interrupt by rising and falling edge trigger
+    GPIO_SetMode(PB, BIT15, GPIO_MODE_INPUT);
+    GPIO_EnableEINT1(PB, 15, GPIO_INT_RISING); // RISING, FALLING, BOTH_EDGE, HIGH, LOW
+    NVIC_EnableIRQ(EINT1_IRQn);
+
+    // Enable interrupt de-bounce function and select de-bounce sampling cycle time
+    GPIO_SET_DEBOUNCE_TIME(GPIO_DBCLKSRC_LIRC, GPIO_DBCLKSEL_64);
+    GPIO_ENABLE_DEBOUNCE(PB, BIT15);
+}
 /*
 123 
 456
@@ -126,20 +149,62 @@ void reset(unsigned char* p1,unsigned char* p2){
     }
 }
 
+void debug(){
+	PC13=0;
+	CLK_SysTickDelay(50000);
+	PC13=1;
+}
+
 signed main(void)
 {
+	int i,j,k,tmpK,num,pflag=1;//pflag=1時是picture1 pflag=0是picture2
+	
+	SYS_Init();
+	Init_EXTINT();
+	init_LCD();
+	clear_LCD();
+	OpenKeyPad();	              // initialize 3x3 keypad
     reset(picture1,using_picture);
-	hexToBinaryMatrix(using_picture,matrix);
-    Rotate_90_clockwise(64,64,&matrix[0][0]);
-    Rotate_90_counterclockwise(64,64,&matrix[0][0]);
-    Flip_horizontally(64,64,&matrix[0][0]);
-    Flip_vertically(64,64,&matrix[0][0]);
-
-    for(int i=0;i<64;i++){
-        for(int j=0;j<64;j++){
-            printf("%d",matrix[i][j]);
+	draw_Bmp64x64(31,0,FG_COLOR,BG_COLOR,using_picture);
+	while(1){
+        k=ScanKey();
+        CLK_SysTickDelay(50000);
+        if ((k != tmpK && k !=0) || (Intk != tmpInt && Intk !=0)){
+            if(Intk)num=0;
+            else num=k;
+            hexToBinaryMatrix(using_picture,matrix);
+            if(num==2){
+                Flip_vertically(SIZE,SIZE,&matrix[0][0]);//SIZE可能出錯
+            }else if(num==4){
+                Flip_horizontally(SIZE,SIZE,&matrix[0][0]);
+            }else if(num==5){
+                pflag=(pflag+1)%2;
+                //切換
+                if(pflag==1){
+                    reset(picture1,using_picture);
+                }else{
+                    reset(picture2,using_picture);
+                }
+                hexToBinaryMatrix(using_picture,matrix);
+            }else if(num==6){
+                Rotate_90_clockwise(SIZE,SIZE,&matrix[0][0]);
+            }else if(num==8){
+                Rotate_90_counterclockwise(SIZE,SIZE,&matrix[0][0]);
+            }if(num==0){
+                //重置
+                if(pflag==1){
+                    reset(picture1,using_picture);
+                }else{
+                    reset(picture2,using_picture);
+                }
+                hexToBinaryMatrix(using_picture,matrix);
+            }
+            binaryMatrixToHex(matrix,using_picture);
+            draw_Bmp64x64(31,0,FG_COLOR,BG_COLOR,using_picture);
         }
-        printf("\n");
+        tmpK=k;
+        tmpInt=Intk;
+        Intk=0;
     }
 	return 0;
 }
