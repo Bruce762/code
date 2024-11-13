@@ -3,8 +3,8 @@ package org.example;
 例行賽的時候非假日票價 500 元，假日 600 元，如果是會員則打八折，但如果是買套票則一律為 250 元。
 季後賽票價 1000 元，會員打八折但沒有套票，也不分是否為例假日。
  */
-public class cal {
-    public static  int calprice(int isHoliday, int isMember, int isPlayoff, int isPackageTicket) throws Exception{
+public class TicketCalculator {//由code review改進程式名稱規範
+    public static  int calPrice(int isHoliday, int isMember, int isPlayoff, int isPackageTicket) throws Exception{
         int price;
         if(isPlayoff==1){
             if(isMember==1){
