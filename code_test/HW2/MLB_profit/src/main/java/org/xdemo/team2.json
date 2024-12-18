@@ -1,0 +1,18 @@
+[
+  {
+    "team": "LAD",
+    "stadium": "Dodger Stadium",
+    "seating_capacity": "56,000",
+    "playoff_full_rate": 1,
+    "world_series_full_rate": 1,
+    "rank": 1
+  },
+  {
+    "team": "SD",
+    "stadium": "Petco Park",
+    "seating_capacity": 40000,
+    "playoff_full_rate": 1,
+    "world_series_full_rate": 1,
+    "rank": 4
+  }
+]

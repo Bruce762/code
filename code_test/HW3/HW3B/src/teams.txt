@@ -1,0 +1,32 @@
+TB 99 63 AL East
+BAL 101 61 AL East
+TOR 89 73 AL East
+NYY 82 80 AL East
+MIN 87 75 AL Central
+DET 78 84 AL Central
+CLE 76 86 AL Central
+CWS 61 101 AL Central
+KC 56 106 AL Central
+HOU 90 72 AL West
+TEX 90 72 AL West
+SEA 88 74 AL West
+LAA 73 89 AL West
+OAK 50 112 AL West
+
+ATL 104 58 NL East
+PHI 90 72 NL East
+MIA 84 78 NL East
+NYM 75 87 NL East
+WSH 71 91 NL East
+MIL 92 70 NL Central
+CHC 83 79 NL Central
+CIN 82 80 NL Central
+PIT 76 86 NL Central
+STC 71 91 NL Central
+LAD 100 62 NL West
+AZ 84 78 NL West
+SD 82 80 NL West
+SF 79 83 NL West
+COL 59 103 NL West
+
+  

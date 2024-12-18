@@ -1,0 +1,98 @@
+[
+  {
+    "team": "LAD",
+    "stadium": "Dodger Stadium",
+    "seating_capacity": 56000,
+    "playoff_full_rate": 1,
+    "world_series_full_rate": 1,
+    "rank": 1
+  },
+  {
+    "team": "SD",
+    "stadium": "Petco Park",
+    "seating_capacity": 40000,
+    "playoff_full_rate": 1,
+    "world_series_full_rate": 1,
+    "rank": 4
+  },
+  {
+    "team": "MIL",
+    "stadium": "American Family Field",
+    "seating_capacity": 42000,
+    "playoff_full_rate": 0.97,
+    "world_series_full_rate": 1,
+    "rank": 3
+  },
+  {
+    "team": "NYM",
+    "stadium": "Citi Field",
+    "seating_capacity": 41800,
+    "playoff_full_rate": 1,
+    "world_series_full_rate": 1,
+    "rank": 6
+  },
+  {
+    "team": "ATL",
+    "stadium": "Truist Park",
+    "seating_capacity": 41000,
+    "playoff_full_rate": 1,
+    "world_series_full_rate": 1,
+    "rank": 5
+  },
+  {
+    "team": "BAL",
+    "stadium": "Oriole Park",
+    "seating_capacity": 45000,
+    "playoff_full_rate": 1,
+    "world_series_full_rate": 1,
+    "rank": 4
+  },
+  {
+    "team": "NYY",
+    "stadium": "Yankee Stadium",
+    "seating_capacity": 47000,
+    "playoff_full_rate": 1,
+    "world_series_full_rate": 1,
+    "rank": 1
+  },
+  {
+    "team": "CLE",
+    "stadium": "Progressive Field",
+    "seating_capacity": 34800,
+    "playoff_full_rate": 0.98,
+    "world_series_full_rate": 1,
+    "rank": 2
+  },
+  {
+    "team": "HOU",
+    "stadium": "Minute Maid Park",
+    "seating_capacity": 41000,
+    "playoff_full_rate": 1,
+    "world_series_full_rate": 1,
+    "rank": 3
+  },
+  {
+    "team": "KS",
+    "stadium": "Kauffman Stadium",
+    "seating_capacity": 37000,
+    "playoff_full_rate": 1,
+    "world_series_full_rate": 1,
+    "rank": 5
+  },
+  {
+    "team": "DET",
+    "stadium": "Comerica Park",
+    "seating_capacity": 41000,
+    "playoff_full_rate": 1,
+    "world_series_full_rate": 1,
+    "rank": 6
+  },
+  {
+    "team": "PHI",
+    "stadium": "Citizens Bank Park",
+    "seating_capacity": 42792,
+    "playoff_full_rate": 1,
+    "world_series_full_rate": 1,
+    "rank": 2
+  }
+]

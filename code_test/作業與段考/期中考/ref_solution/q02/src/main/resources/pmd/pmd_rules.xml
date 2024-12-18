@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ruleset name="All Java Rules"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+    <description>Every Java Rule in PMD</description>
+
+    <!-- the rules to be checked -->
+    <rule ref="category/java/bestpractices.xml">
+        <exclude name="SystemPrintln"/>
+        <exclude name="AvoidReassigningParameters"/>
+        <!--關掉 log 有無啟用的檢查-->
+        <exclude name="GuardLogStatement"/>
+    </rule>
+    <!--codestyle-->
+    <rule ref="category/java/codestyle.xml/ClassNamingConventions"/>
+    <rule ref="category/java/codestyle.xml/MethodNamingConventions"/>
+    <rule ref="category/java/codestyle.xml/VariableNamingConventions"/>
+
+    <rule ref="category/java/design.xml"/>
+    <rule ref="category/java/errorprone.xml"/>
+    <rule ref="category/java/multithreading.xml"/>
+    <rule ref="category/java/performance.xml"/>
+    <rule ref="category/java/security.xml"/>
+
+    <rule ref="category/java/documentation.xml/CommentSize">
+        <properties>
+            <property name="maxLines" value="6"/>
+            <property name="maxLineLength" value="80"/>
+        </properties>
+    </rule>
+    <!--  override the rules  -->
+    <rule ref="category/java/documentation.xml/CommentRequired">
+        <properties>
+            <property name="fieldCommentRequirement" value="Ignored"/>
+            <property name="publicMethodCommentRequirement" value="Ignored"/>
+            <property name="protectedMethodCommentRequirement" value="Ignored"/>
+        </properties>
+    </rule>
+</ruleset>
