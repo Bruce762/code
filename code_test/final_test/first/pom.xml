@@ -11,31 +11,34 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <junit.jupiter.version>5.11.0</junit.jupiter.version> <!-- JUnit 5 -->
     </properties>
 
     <dependencies>
-        <!-- JUnit 5 Dependency -->
+        <!-- JUnit 4 Dependency-->
+        <!--
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+        -->
+
+        <!-- JUnit 5 Dependency-->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit.jupiter.version}</version>
+            <version>5.9.3</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>${junit.jupiter.version}</version>
+            <version>5.9.3</version>
             <scope>test</scope>
         </dependency>
 
-        <!-- Mockito Dependency for JUnit 5 -->
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-junit-jupiter</artifactId>
-            <version>5.12.0</version>
-            <scope>test</scope>
-        </dependency>
+
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
@@ -43,14 +46,18 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>5.12.0</version> <!-- Use the same version as mockito-core -->
+        </dependency>
         <!-- Selenium WebDriver -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.12.0</version>
         </dependency>
-
-        <!-- Cucumber -->
+        <!-- cucumber -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
@@ -67,7 +74,7 @@
 
     <build>
         <plugins>
-            <!-- JaCoCo Plugin for Code Coverage -->
+            <!-- JaCoCo Plugin (Optional for Coverage Analysis) -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -89,17 +96,7 @@
                 </executions>
             </plugin>
 
-            <!-- Surefire Plugin for Running Tests (JUnit 5 Support) -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M5</version> <!-- Ensure JUnit 5 compatibility -->
-                <configuration>
-                    <useModulePath>false</useModulePath>
-                </configuration>
-            </plugin>
-
-            <!-- Pitest Plugin for Mutation Testing -->
+            <!-- Pitest Plugin Configuration for JUnit 4 -->
             <plugin>
                 <groupId>org.pitest</groupId>
                 <artifactId>pitest-maven</artifactId>
@@ -113,11 +110,13 @@
                     </targetTests>
                     <mutators>STRONGER</mutators>
                     <threads>4</threads>
+                    <!--                    <timeoutConst>4000</timeoutConst>-->
                     <outputFormats>
                         <param>HTML</param>
                     </outputFormats>
                 </configuration>
             </plugin>
         </plugins>
+
     </build>
 </project>
