@@ -116,6 +116,26 @@
                     </outputFormats>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.25.0</version>
+                <configuration>
+                    <rulesets>
+                        <!-- 指定使用的 PMD 規則集 -->
+                        <ruleset>./src/main/resources/pmd/ruleset.xml</ruleset>
+                    </rulesets>
+                </configuration>
+
+                <executions>
+                    <execution>
+                        <goals>
+                            <!-- 執行 PMD 的 check 工作 -->
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
 
     </build>

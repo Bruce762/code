@@ -718,6 +718,263 @@ class GoBangframeTest {
         assertEquals(0, goBangframe.turn, "黑棋勝利後，遊戲應該結束");
         assertTrue(outContent.toString().contains("黑方赢"), "應該輸出黑棋勝利的訊息");
     }
+    @Test
+    void testDiagonalWinCondition135() {
+        // 初始化 GoBangframe 和 FrameListener
+        GoBangframe goBangframe = new GoBangframe();
+        goBangframe.initUI();
+        FrameListener frameListener = new FrameListener();
+        frameListener.setGraphics(goBangframe);
 
+        // 設置遊戲狀態
+        goBangframe.turn = 1; // 黑棋回合
+        goBangframe.ChooseType = 0; // 人人對戰模式
 
+        // 模擬在對角線 (2,2) -> (5,5) 上先放 4 顆黑棋
+        goBangframe.isAvail[2][2] = 1;
+        goBangframe.isAvail[3][3] = 1;
+        goBangframe.isAvail[4][4] = 1;
+        goBangframe.isAvail[5][5] = 1;
+
+        // 捕捉 System.out 輸出
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        // 模擬最後一顆黑棋在 (6,6) 落子
+        // 假設 (6,6) 對應到滑鼠點擊位置 (x, y)
+        // x, y 值需依您的棋盤繪製座標轉換
+        // 以下只是示意用數值
+        frameListener.mouseClicked(new MouseEvent(
+                goBangframe, 0, 0, 0,
+                20 + 6*40, // 比方一個格子 40px
+                20 + 6*40,
+                1, false
+        ));
+
+        // 驗證遊戲狀態
+        assertEquals(0, goBangframe.turn, "黑棋勝利後，遊戲應該結束");
+        assertTrue(outContent.toString().contains("黑方赢"), "應該輸出黑棋勝利的訊息");
+    }
+
+    @Test
+    void testDiagonalWinCondition45() {
+        // 1. 初始化遊戲視窗與監聽器
+        GoBangframe goBangframe = new GoBangframe();
+        goBangframe.initUI();
+        FrameListener frameListener = new FrameListener();
+        frameListener.setGraphics(goBangframe);
+
+        // 2. 設置遊戲狀態：黑棋先下，並且模式為人人對戰
+        goBangframe.turn = 1;
+        goBangframe.ChooseType = 0;
+
+        // 3. 在 45 度對角線上，事先放好 4 顆黑棋
+        goBangframe.isAvail[4][4] = 1;
+        goBangframe.isAvail[3][5] = 1;
+        goBangframe.isAvail[5][3] = 1;
+        goBangframe.isAvail[6][2] = 1;
+
+        // 4. 捕捉 System.out 輸出
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        // 5. 模擬最後一顆黑棋 (2,6) 的落子
+        //    假設 (2,6) 對應到的像素座標 (x,y)，需依你的棋盤繪製規則換算
+        //    這裡僅舉例：若每格 40px，棋盤左上角留 20px 邊距，可以：
+        frameListener.mouseClicked(new MouseEvent(
+                goBangframe, 0, 0, 0,
+                20 + 6 * 40, // x位置
+                20 + 2 * 40, // y位置
+                1, false
+        ));
+
+        // 6. 驗證遊戲狀態：黑棋應該勝利並結束回合
+        assertEquals(0, goBangframe.turn, "黑棋勝利後，遊戲應該結束");
+        assertTrue(
+                outContent.toString().contains("黑方赢"),
+                "應該輸出黑棋勝利的訊息"
+        );
+    }
+    @Test
+    void testHorizontalWinConditionWhite() {
+        // 1. 初始化遊戲視窗和監聽器
+        GoBangframe goBangframe = new GoBangframe();
+        goBangframe.initUI();
+        FrameListener frameListener = new FrameListener();
+        frameListener.setGraphics(goBangframe);
+
+        // 2. 設置遊戲狀態：現在是白棋的回合 (如果程式規定先黑後白，你也可以先設定黑棋回合並模擬走幾步)
+        goBangframe.turn = 2; // 2 代表白棋回合
+        goBangframe.ChooseType = 0; // 人人對戰模式
+
+        // 3. 在第 3 列 [3][0..3] 放 4 顆白棋
+        for (int j = 0; j < 4; j++) {
+            goBangframe.isAvail[3][j] = 2;
+        }
+
+        // 4. 捕捉 System.out 輸出
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        // 5. 模擬白棋在 (3,4) 的落子
+        //    假設這個座標對應到的滑鼠 (x, y)，需依實際棋盤的像素位置計算。
+        //    這裡做個舉例：若每格 40px，左上角邊距是 20px，可以：
+        frameListener.mouseClicked(new MouseEvent(
+                goBangframe,
+                0,
+                0,
+                0,
+                20 + 4 * 40, // x
+                20 + 3 * 40, // y
+                1,
+                false
+        ));
+
+        // 6. 驗證遊戲狀態：應該顯示「白方贏」並結束遊戲
+        assertEquals(0, goBangframe.turn, "白棋勝利後，遊戲應該結束");
+        assertTrue(
+                outContent.toString().contains("白方赢"),
+                "應該輸出白棋勝利的訊息"
+        );
+    }
+    @Test
+    void testWhiteWinConditionCount1() {
+        // 1. 初始化遊戲物件與監聽器
+        GoBangframe goBangframe = new GoBangframe();
+        goBangframe.initUI();
+        FrameListener frameListener = new FrameListener();
+        frameListener.setGraphics(goBangframe);
+
+        // 2. 設置遊戲為白棋回合
+        //    (若程式邏輯規定一定要先黑再白，你也可以先模擬幾步黑棋；這裡先直接指定為白棋)
+        goBangframe.turn = 2;
+        goBangframe.ChooseType = 0; // 人人對戰模式
+
+        // 3. 在第 3 列 (Arrayi = 3) 先擺 4 顆白棋：位置 (3,0), (3,1), (3,2), (3,3)
+        //    注意：依照您程式中 isAvail[row][col] 的定義，第一個索引是 row (Arrayi)，第二個是 col (Arrayj)
+        goBangframe.isAvail[3][0] = 2;
+        goBangframe.isAvail[3][1] = 2;
+        goBangframe.isAvail[3][2] = 2;
+        goBangframe.isAvail[3][3] = 2;
+
+        // 4. 捕捉 System.out 的輸出
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        // 5. 模擬白棋在 (3,4) 落子
+        //    假設 (3,4) 對應的像素座標 (x, y)，要依照您 GoBangframe 中的邏輯計算
+        //    比方說，每格大小 40px，左上邊距 20px，則可能是：
+        int xPos = 20 + 4 * 40;  // col=4
+        int yPos = 20 + 3 * 40;  // row=3
+
+        frameListener.mouseClicked(new MouseEvent(
+                goBangframe,
+                0,
+                0,
+                0,
+                xPos,
+                yPos,
+                1,
+                false
+        ));
+
+        // 6. 驗證結果：檢查遊戲是否輸出「白方贏」並結束 (turn=0)
+        assertEquals(0, goBangframe.turn, "白棋勝利後，應該將 gf.turn 設為 0 結束遊戲");
+        assertTrue(
+                outContent.toString().contains("白方赢"),
+                "應該輸出白方贏的訊息"
+        );
+    }
+    @Test
+    void testDiagonal135WinConditionWhite() {
+        // 1. 初始化
+        GoBangframe goBangframe = new GoBangframe();
+        goBangframe.initUI();
+        FrameListener frameListener = new FrameListener();
+        frameListener.setGraphics(goBangframe);
+
+        // 2. 設定遊戲為白棋回合 (turn=2)
+        goBangframe.turn = 2;
+        goBangframe.ChooseType = 0; // 人人對戰模式
+
+        // 3. 在 135 度對角線 (2,2), (3,3), (4,4), (5,5) 放 4 顆白棋
+        goBangframe.isAvail[2][2] = 2;
+        goBangframe.isAvail[3][3] = 2;
+        goBangframe.isAvail[4][4] = 2;
+        goBangframe.isAvail[5][5] = 2;
+
+        // 4. 捕捉 System.out 的輸出
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        // 5. 模擬在 (6,6) 放下第 5 顆白棋 (會觸發 count3 == 5)
+        //    假設棋盤左上角邊距 20px，每格寬 40px；依實際情況調整
+        int xPos = 20 + 6 * 40;
+        int yPos = 20 + 6 * 40;
+
+        frameListener.mouseClicked(new MouseEvent(
+                goBangframe,
+                0,
+                0,
+                0,
+                xPos,
+                yPos,
+                1,
+                false
+        ));
+
+        // 6. 驗證：應該輸出「白方贏」並將回合 turn 設為 0
+        assertEquals(0, goBangframe.turn, "白棋勝利後，遊戲應該結束 (turn=0)");
+        assertTrue(
+                outContent.toString().contains("白方赢"),
+                "應該輸出白方贏的訊息"
+        );
+    }
+    @Test
+    void testWhiteWinCondition45Degrees() {
+        // 1. 初始化遊戲和監聽器
+        GoBangframe goBangframe = new GoBangframe();
+        goBangframe.initUI();
+        FrameListener frameListener = new FrameListener();
+        frameListener.setGraphics(goBangframe);
+
+        // 2. 設定遊戲回合為白棋 (turn=2)
+        goBangframe.turn = 2;
+        goBangframe.ChooseType = 0; // 人人對戰模式
+
+        // 3. 在 45 度對角線 (2,6) ~ (5,3) 放 4 顆白棋
+        //    注意：goBangframe.isAvail[row][col] = 2 代表白棋
+        goBangframe.isAvail[2][6] = 2;
+        goBangframe.isAvail[3][5] = 2;
+        goBangframe.isAvail[4][4] = 2;
+        goBangframe.isAvail[5][3] = 2;
+
+        // 4. 捕捉 System.out 的輸出
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        // 5. 模擬在 (6,2) 放下第 5 顆白棋
+        //    假設棋盤左上角有 20px 邊距，每格 40px。
+        //    row=6, col=2 => x = 20 + 2*40, y = 20 + 6*40。
+        int xPos = 20 + 2 * 40;
+        int yPos = 20 + 6 * 40;
+
+        frameListener.mouseClicked(new MouseEvent(
+                goBangframe,
+                0,
+                0,
+                0,
+                xPos,
+                yPos,
+                1,
+                false
+        ));
+
+        // 6. 驗證結果：應該輸出「白方贏」並將遊戲回合設為 0 (結束)
+        assertEquals(0, goBangframe.turn, "白棋勝利後，遊戲應該結束");
+        assertTrue(
+                outContent.toString().contains("白方赢"),
+                "應該輸出白方贏的訊息"
+        );
+    }
 }
