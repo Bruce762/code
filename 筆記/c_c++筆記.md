@@ -41,7 +41,7 @@ argv[0]是程式的路徑，argv[1]是輸入的第一個字，argv[2]是第二�
 
 **test.c 內容**
 
-```cpp=
+```cpp
 int main(int argc, char *argv[]) {
     for (int i = 0; i < argc; i++) {
         printf("%s\n", argv[i]);
