@@ -14,7 +14,7 @@ String mfrc522_readID()
       ret += String(rfid.uid.uidByte[i], HEX);
     }//轉成16進制儲存
   }
- rfid.PICC_HaltA();
+  rfid.PICC_HaltA();
   // Stop encryption on PCD
   rfid.PCD_StopCrypto1();
   return ret;//回傳已完成轉存之id
